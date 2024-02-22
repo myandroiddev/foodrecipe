@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FoodRecipe" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/white</item>
+
+    </style>
+
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">8dp</item>
+        <item name="cornerSizeBottomRight">8dp</item>
+        <item name="cornerSizeTopLeft">25dp</item>
+        <item name="cornerSizeTopRight">25dp</item>
+    </style>
+
+    <style name="roundedInputBox" parent="">
+        <item name="borderRound">@dimen/car_ui_body1_size</item>
+    </style>
+
+    <style name="Theme.FoodRecipe" parent="Base.Theme.FoodRecipe" />
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:background="@color/white"
+            tools:context=".RecipeDescription">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/recipeimg"
+                android:layout_width="0dp"
+                android:layout_height="280dp"
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+            <LinearLayout
+
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recipeimg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/recipe_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:text="Toast with egg and avocado"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/mealCategory"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="20dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingredients"
+                    android:layout_marginTop="25dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:id="@+id/ingredients_heading"></TextView>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingredient_layout"></LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Instructions"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#322F2F"
+                    android:textSize="14dp"
+                    android:id="@+id/mealInstructions"
+                    ></TextView>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</layout>

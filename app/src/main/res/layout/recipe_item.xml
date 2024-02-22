@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="meal"
+            type="com.example.foodrecipeFoodC.Meal" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/recipe_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            android:onClick="recipeDescription"
+            android:tag=""
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/recipe_img"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/i3"
+                bind:loadImageUrl="@{meal.strMealThumb}"></ImageView>
+
+            <TextView
+                android:id="@+id/recipe_name"
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="270dp"
+                android:maxWidth="280dp"
+                android:text="@{meal.strMeal}"
+                android:textColor="@color/black"
+                android:textSize="21dp"></TextView>
+
+            <ImageView
+                android:id="@+id/time_logo"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="272dp"
+                android:src="@drawable/baseline_access_time_24"></ImageView>
+
+            <TextView
+                android:id="@+id/recipe_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="350dp"
+                android:layout_marginTop="272dp"
+                android:text="30"
+                android:textColor="@color/black"
+                android:textSize="18dp"></TextView>
+
+            <TextView
+                android:id="@+id/ingredient1"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="310dp"
+                android:text="@{meal.strIngredient1}"
+                android:textColor="@color/black"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="305dp"
+                android:text="I"
+                android:textColor="#2eacaa"
+                android:textSize="25dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/ingredient2"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="115dp"
+                android:layout_marginTop="310dp"
+                android:text="@{meal.strIngredient2}"
+                android:textColor="@color/black"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="305dp"
+                android:text="I"
+                android:textColor="#2eacaa"
+                android:textSize="25dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/ingredient3"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="310dp"
+                android:text="@{meal.strIngredient3}"
+                android:textColor="@color/black"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="305dp"
+                android:layout_marginTop="310dp"
+                android:text="etc."
+                android:textColor="@color/black"
+                android:textSize="16dp"></TextView>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
